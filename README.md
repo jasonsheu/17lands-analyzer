@@ -14,12 +14,38 @@ A Jupyter-based tool for tracking and visualizing Magic: The Gathering card perf
 
 ## Setup
 
-Requires Python 3.13 and [`uv`](https://github.com/astral-sh/uv).
+Requires Python 3.13.
+
+### With uv (recommended)
+
+[`uv`](https://github.com/astral-sh/uv) handles the virtual environment and dependency installation in one step:
 
 ```bash
 git clone https://github.com/jasonsheu/17lands-analyzer.git
 cd 17lands-analyzer
 uv sync
+```
+
+### Without uv
+
+Use the standard library `venv` module and `pip`:
+
+```bash
+git clone https://github.com/jasonsheu/17lands-analyzer.git
+cd 17lands-analyzer
+python -m venv .venv
+```
+
+Activate the environment:
+
+- **macOS / Linux:** `source .venv/bin/activate`
+- **Windows (cmd):** `.venv\Scripts\activate.bat`
+- **Windows (PowerShell):** `.venv\Scripts\Activate.ps1`
+
+Then install dependencies:
+
+```bash
+pip install ipywidgets jupyterlab nbformat numpy pandas plotly scikit-learn scipy seaborn
 ```
 
 ## Usage
@@ -34,8 +60,16 @@ data/card-ratings-YYYY-MM-DD.csv
 
 ### 2. Open the notebook
 
+With uv:
+
 ```bash
 uv run jupyter lab strixhaven_analysis.ipynb
+```
+
+Without uv (activate your virtual environment first):
+
+```bash
+jupyter lab strixhaven_analysis.ipynb
 ```
 
 Or open `strixhaven_analysis.ipynb` directly in VS Code with the Jupyter extension.
