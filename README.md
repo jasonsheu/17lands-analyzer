@@ -86,7 +86,7 @@ The notebook loads all files in `data/` automatically and renders interactive wi
 | **OH WR** | Opening Hand Win Rate — win rate when drawn in the opening hand |
 | **GD WR** | Game Decided Win Rate — win rate when the card decided the game |
 | **GNS WR** | Games Not Seen Win Rate — win rate when the card was never drawn |
-| **IIH** | Impact In Hand — percentage point difference between GIH WR and GNS WR |
+| **IIH** | Improvement In Hand — percentage point difference between GIH WR and GNS WR |
 | **ALSA** | Average Last Seen At — how late in the draft the card is typically seen |
 | **ATA** | Average Taken At — average pick number when the card is taken |
 
