@@ -11,3 +11,4 @@ wheels/
 
 .png
 .env
+.ipynb_checkpoints/
